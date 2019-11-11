@@ -34,3 +34,16 @@ Output:
 ![outputExcel4](https://user-images.githubusercontent.com/47696394/68582387-88dd0800-04b5-11ea-8f77-9269396a46bf.PNG)
 ![outputExcel5](https://user-images.githubusercontent.com/47696394/68582388-8bd7f880-04b5-11ea-856c-72a3cb925aa7.PNG)
 ![outputExcel6](https://user-images.githubusercontent.com/47696394/68582392-90041600-04b5-11ea-965c-002cf162cbc1.PNG)
+
+UML class Diagram:
+![classDiagram](https://user-images.githubusercontent.com/47696394/68588020-74077100-04c3-11ea-8008-47301b082a52.PNG)
+
+YouTube Presentation:
+
+
+References:
+GoXR3Plus Studio .GitHub API Tutorial for getting total repository downloaGoXR3Plus Studio .ds and more. From https://www.youtube.com/watch?v=D-O-vwOXuMI&t=355s
+
+
+Coding Master - Programming Tutorials. How to Send HTTP Request and Parse JSON Data Using Java. From
+https://www.youtube.com/watch?v=qzRKa8I36Ww&list=WL&index=37&t=0s
