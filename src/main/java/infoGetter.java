@@ -14,42 +14,40 @@ class infoGetter{
             try {
                 final Document document = Jsoup.connect(url + "?access_token=cdea46c74ec89bb3e076fbd77ade35d181e77af7").ignoreContentType(true).get();
 
-                //Login id
                 Pattern loginID = Pattern.compile("(\"login\": \")(.*)(\", \"id\":)");
                 Matcher LoginiD = loginID.matcher(document.text());
                 if (LoginiD.find()) {
                     userData[0] = LoginiD.group(2);
                 }
-                //Num repo
+
                 Pattern rePo = Pattern.compile("(\"public_repos\": )(\\d+)");
                 Matcher Repo = rePo.matcher(document.text());
                 if (Repo.find()) {
                     userData[1] = Repo.group(2);
                 }
-                //total followers
+
                 Pattern folloWers = Pattern.compile("(\"followers\": )(\\d+)");
                 Matcher Followers = folloWers.matcher(document.text());
                 if (Followers.find()) {
                     userData[2] = Followers.group(2);
                 }
-                //id number
+
                 Pattern idNum = Pattern.compile("(\"id\": )(\\d+)");
                 Matcher IDnum = idNum.matcher(document.text());
                 if (IDnum.find()) {
                     userData[3] = IDnum.group(2);
                 }
-                //typeUser
+
                 Pattern typeUser = Pattern.compile("(\"type\": \")(.*)(\", \"site_admin\":)");
                 Matcher useR = typeUser.matcher(document.text());
                 if (useR.find()) {
                     userData[4] = useR.group(2).replaceAll("T", " ").replaceAll("Z", "");
                 }
 
-                //zhamri total followers
                 Pattern followersNum = Pattern.compile("(\"followers_url\": \")(.*)(\", \"following_url\":)");
-                Matcher Followersnum = followersNum.matcher(document.text());
-                if (Followersnum.find()) {
-                    userData[5] = Followersnum.group(2);
+                Matcher matchFollowers_url = followersNum.matcher(document.text());
+                if (matchFollowers_url.find()) {
+                    userData[5] = matchFollowers_url.group(2);
                 }
 
                 break;
