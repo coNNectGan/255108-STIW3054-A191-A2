@@ -1,9 +1,8 @@
 
-
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class main {
+public class Main {
 
     private static int followerNum = 0, reader = 0;
 
@@ -39,7 +38,7 @@ public class main {
 
                 String[] Info = {String.valueOf(finalCount), userInfo[0], userInfo[1], userInfo[2], userInfo[3], userInfo[4]};
 
-                synchronized (main.class) {
+                synchronized (Main.class) {
                     excelData.addData(Info);
 
                     reader++;
@@ -59,7 +58,7 @@ public class main {
 
             if(reader==followerNum){
                 excelCreater.readData();
-              excelCreater.excelfile();
+                excelCreater.excelfile();
                 break;
             }
         }

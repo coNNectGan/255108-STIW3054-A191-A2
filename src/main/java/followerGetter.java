@@ -13,7 +13,7 @@ class followerGetter{
 
             while (true){
                 try {
-                    final Document document = Jsoup.connect(apiUrl + "?access_token=cdea46c74ec89bb3e076fbd77ade35d181e77af7" +"&page="+page).ignoreContentType(true).get();
+                    final Document document = Jsoup.connect(apiUrl + "?access_token=452f8e4c1d165937b1f645b6d696dfc3aa5dca74" +"&page="+page).ignoreContentType(true).get();
 
                     if(document.text().equals("[ ]")){
                         break;
